@@ -1,4 +1,6 @@
 # proyecto-integrador-prog
+Proyecto Integrador de Programación I, Digital House
+---
 
 5 pelis:
 - Rocky IV
@@ -7,6 +9,9 @@
 - Batman (El Caballero de la Noche)
 - Gladiador
   
-2 series:
+5 series:
 - Dr. House
 - Ragnarok
+- ?
+- ?
+- ?

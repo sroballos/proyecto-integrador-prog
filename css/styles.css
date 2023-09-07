@@ -1,35 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
 body{
 color: white;
 background: #000000;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+
 .contenedorgeneral{
     max-width: 1180px;
     margin: 0 auto;
 }
 
-.loginsearch{
-    display: flex;
-    align-items: center;
-    background-color: black;
-    border: white solid;
-    border-radius: 15px;
-    margin-bottom: 10px;
-}
 
-.login{
-    display: flex;
-    justify-content: space-evenly;
-    width: 10%;
-
-}
-
-.search{
-    justify-content: flex-end;
-}
-
-header,.links{
+header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -38,19 +28,15 @@ header,.links{
     border: white solid;
     border-radius: 15px;
     line-height: 20px;
-    flex-direction: column;
     font-family: 'Bebas Neue', sans-serif;
+    margin-top: 40px;
 }
-.links{
+header a{
     line-height: 30px;
-    flex-direction: row;
     margin-top: 10px;
     font-family: "Staatliches, sans-serif";
 }
 
-h2{
-    font-size: 1.75em;
-}
 .logo{
     background-color: white;
     border-radius: 20%;
@@ -60,5 +46,45 @@ h2{
 
 .titulo{
     color: white;
-    font-size: 5em;
+    font-size: 3em;
 }
+
+.contenedor{
+
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.contenedor h2{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family:'Bebas Neue', sans-serif;
+    line-height: 1rem;
+}
+
+.contpelis{
+    display: flex;
+    justify-content: space-around;
+}
+
+.media{
+    display: flex;
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+    font-family:'Bebas Neue', sans-serif;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+.media img{
+    width: 10vw;
+    border: 15px;
+    border-radius: 20px;
+}
+
