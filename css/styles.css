@@ -74,6 +74,10 @@ header a{
     justify-content: space-around;
 }
 
+.contenedor a {
+    color: white;
+}
+
 .media{
 
     width: 10vw;
