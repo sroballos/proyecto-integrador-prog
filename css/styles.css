@@ -111,6 +111,10 @@ header a{
     margin-right: 10px;
     letter-spacing: 0.2em;
 }
+.dos{
+    margin-left: 20px;
+    margin-top: 20px;
+}
 
 @media(max-width:450px){
     header{
@@ -132,4 +136,5 @@ header a{
     .media img{
         width: 50%;
     }
+    
 }
