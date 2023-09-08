@@ -81,7 +81,8 @@ header a{
 .media{
 
     width: 10vw;
-    
+    display: flex;
+    justify-content: center;
     align-items: center;
     font-family:'Bebas Neue', sans-serif;
     flex-direction: column;
