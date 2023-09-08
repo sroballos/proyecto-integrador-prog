@@ -16,6 +16,14 @@ Proyecto Integrador de Programación I, Digital House
 - Los Sopranos
 - The Office
 
+Películas Más Vistas:
+- El Padrino
+- Titanic
+- Star Wars IV
+- LOTR I
+- Pulp Fiction
+
+
 División de Páginas:
 Index y Géneros: Sebastián Roballos
 Detalles Género y Detalles Series: Juan Ibero
