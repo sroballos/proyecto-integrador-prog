@@ -175,3 +175,79 @@ header a{
     }
     
 }
+.g_contenedor{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction:row;
+    
+
+}
+ .g1_contenedor{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+ }
+ .g2_contenedor{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+ }
+
+.gladiador_g{
+    width: 375px;
+    height: 400px;
+}
+
+.duracion{
+font-family: 'Titillium Web', sans-serif;
+color: grey;
+
+}
+
+.trailer{
+  
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    
+}
+
+.año{
+   
+
+}
+
+.titulo{
+font-family:'Bebas Neue', sans-serif;
+}
+
+.div_titulo_ano{
+
+}
+
+.pelis_g{
+    display: flex;
+    justify-content: space-around;
+}
+
+.peli_g{
+width: 20%;
+height: 40%;
+}
