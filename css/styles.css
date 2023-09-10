@@ -109,6 +109,7 @@ header a{
 
 .final{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
@@ -151,30 +152,6 @@ header a{
     
 }
 
-
-
-@media(max-width:450px){
-    header{
-        flex-direction: column;
-        width: 100%;
-        margin-top: 20px;
-    }
-    .contenedor{
-        height: fit-content;
-    }
-    .contpelis{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-    .media{
-        width: 100%;
-    }
-    .media img{
-        width: 50%;
-    }
-    
-}
 .g_contenedor{
     height: fit-content;
     width: 100%;
@@ -234,7 +211,7 @@ color: grey;
 
 }
 
-.titulo{
+.titulo_g{
 font-family:'Bebas Neue', sans-serif;
 }
 
@@ -250,4 +227,26 @@ font-family:'Bebas Neue', sans-serif;
 .peli_g{
 width: 20%;
 height: 40%;
+}
+
+@media(max-width:450px){
+    header{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .contenedor{
+        height: fit-content;
+    }
+    .contpelis{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .media{
+        width: 100%;
+    }
+    .media img{
+        width: 50%;
+    }   
 }
