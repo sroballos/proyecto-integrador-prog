@@ -109,8 +109,9 @@ header a{
 
 .final{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
+    
 }
 
 .blue{
@@ -118,6 +119,15 @@ header a{
     margin-right: 10px;
     letter-spacing: 0.2em;
 }
+
+.contenedor .generos{
+    font-size: 80px;
+    letter-spacing: 0.5em;
+    background-color: rgba(165, 42, 42, 0.603) ;
+}
+
+
+
 .dos{
     margin-left: 20px;
     margin-top: 20px;
@@ -229,14 +239,11 @@ width: 20%;
 height: 40%;
 }
 
-@media(max-width:450px){
+@media(max-width:768px){
     header{
         flex-direction: column;
         width: 100%;
         margin-top: 20px;
-    }
-    .contenedor{
-        height: fit-content;
     }
     .contpelis{
         flex-direction: column;
@@ -249,4 +256,10 @@ height: 40%;
     .media img{
         width: 50%;
     }   
+    .final{
+        flex-direction: column;
+    }
+    .contenedor .generos{
+        font-size: 55px;
+    }
 }
