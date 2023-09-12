@@ -79,7 +79,6 @@ header a{
 }
 
 .media{
-
     width: 10vw;
     display: flex;
     justify-content: center;
@@ -110,7 +109,9 @@ header a{
 
 .final{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    
 }
 
 .blue{
@@ -118,6 +119,15 @@ header a{
     margin-right: 10px;
     letter-spacing: 0.2em;
 }
+
+.contenedor .generos{
+    font-size: 80px;
+    letter-spacing: 0.5em;
+    background-color: rgba(165, 42, 42, 0.603) ;
+}
+
+
+
 .dos{
     margin-left: 20px;
     margin-top: 20px;
@@ -154,16 +164,97 @@ header a{
     
 }
 
+.g_contenedor{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction:row;
+    
+
+}
+ .g1_contenedor{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+ }
+ .g2_contenedor{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+ }
+
+.gladiador_g{
+    width: 375px;
+    height: 400px;
+}
+
+.duracion{
+font-family: 'Titillium Web', sans-serif;
+color: grey;
+
+}
+
+.trailer{
+  
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    
+}
+
+.año{
+   
+
+}
+
+.titulo_g{
+font-family:'Bebas Neue', sans-serif;
+}
+
+.div_titulo_ano{
+
+}
+
+.pelis_g{
+    display: flex;
+    justify-content: space-around;
+}
+
+.peli_g{
+width: 20%;
+height: 40%;
+}
 
 
-@media(max-width:450px){
+.poster_accion{
+    width: 375px;
+    height: 400px;
+}
+
+
+
+
+@media(max-width:768px){
     header{
         flex-direction: column;
         width: 100%;
         margin-top: 20px;
-    }
-    .contenedor{
-        height: fit-content;
     }
     .contpelis{
         flex-direction: column;
@@ -175,6 +266,11 @@ header a{
     }
     .media img{
         width: 50%;
+    }   
+    .final{
+        flex-direction: column;
     }
-    
+    .contenedor .generos{
+        font-size: 55px;
+    }
 }
