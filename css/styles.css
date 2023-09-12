@@ -132,15 +132,9 @@ header a{
     margin-top: 20px;
     
 }
-.clashroyale{
-    display: flex;
-   
-    padding: 50px;
-    margin: 50px;
-    width: 250px;
-    height: 250px;
+
     
-}
+
 .favoritos{
     display: flex;
     justify-content: center;
@@ -150,14 +144,22 @@ header a{
     font-size: 50px;
     border-radius: 20%;
     border-style: dashed;
+       
+}
+.estrellabox{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px;
+  
     
-    
+    border-style:double;
+    border-color: burlywood;
+    border-radius: 30px;
+    background-color: black;
 }
 .estrella{
-    padding: 20px;
-   margin-top: 20px;
-    display: flex;
-    align-items: center;
+    padding: 25px;
+   
     
 }
 
