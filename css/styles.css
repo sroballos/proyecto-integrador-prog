@@ -243,18 +243,21 @@ height: 40%;
 
 .seriehouse{
     display: flex;
+    padding: 20px;
 }
 
 .seriehouse img{
     padding: 20px;
     border-radius: 100px;
+    width: 50%;
+    height: fit-content;
 }
 
 .detallesdehouse{
     display: flex;
     width: 50%;
     flex-direction: column;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-family: 'Nunito Sans', sans-serif;
 }
 
