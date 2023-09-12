@@ -239,6 +239,15 @@ width: 20%;
 height: 40%;
 }
 
+
+.poster_accion{
+    width: 375px;
+    height: 400px;
+}
+
+
+
+
 @media(max-width:768px){
     header{
         flex-direction: column;
@@ -262,9 +271,4 @@ height: 40%;
     .contenedor .generos{
         font-size: 55px;
     }
-}
-
-.poster_accion{
-    width: 375px;
-    height: 400px;
 }
