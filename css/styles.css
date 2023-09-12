@@ -354,4 +354,19 @@ font-size: x-large;
     .contenedor .generos{
         font-size: 55px;
     }
+    .seriehouse{
+        flex-direction: column;
+    }
+    .seriehouse img{
+        width: 100%;
+    }
+    
+    .detallesdehouse{
+        width: 100%;
+    }
+
+    .detallesdehouse iframe{
+        width: 100%;
+    }
+    
 }
