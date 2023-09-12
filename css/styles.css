@@ -11,7 +11,6 @@ color: white;
 background: #000000;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
 .contenedorgeneral{
     max-width: 1180px;
     margin: 0 auto;
@@ -133,15 +132,9 @@ header a{
     margin-top: 20px;
     
 }
-.clashroyale{
-    display: flex;
-   
-    padding: 50px;
-    margin: 50px;
-    width: 250px;
-    height: 250px;
+
     
-}
+
 .favoritos{
     display: flex;
     justify-content: center;
@@ -151,14 +144,22 @@ header a{
     font-size: 50px;
     border-radius: 20%;
     border-style: dashed;
+       
+}
+.estrellabox{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px;
+  
     
-    
+    border-style:double;
+    border-color: burlywood;
+    border-radius: 30px;
+    background-color: black;
 }
 .estrella{
-    padding: 20px;
-   margin-top: 20px;
-    display: flex;
-    align-items: center;
+    padding: 25px;
+   
     
 }
 
@@ -221,7 +222,6 @@ color: grey;
 font-family:'Bebas Neue', sans-serif;
 }
 
-
 .pelis_g{
     display: flex;
     justify-content:space-around;
@@ -239,74 +239,39 @@ height: 40%;
     height: 400px;
 }
 
-.accion_aventura{
-    height: fit-content;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.644);
-    border: white dashed 2px;
-    border-radius: 20px;
-    margin-top: 50px;
+.ghouse{
+    margin-bottom: 15px;
 }
 
-.titulo_accion{
+.seriehouse{
     display: flex;
-    justify-content: center;
 }
 
-.detalles_del_genero{
-  font-family: 'Bebas Neue', sans-serif;
+.seriehouse img{
+    padding: 20px;
+    border-radius: 100px;
 }
 
-
- 
-
-
-.trailer_genero{
-    height: fit-content;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.644);
-    border: white dashed 2px;
-    border-radius: 20px;
-
+.detallesdehouse{
     display: flex;
+    width: 50%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../img/80s-Movie-Wallpapers.jpg);
-    background-size:cover;
-    background-position: center;
-}
-.fondo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 800px;
-    height: 500px;
-   
-}
-.pelis_accion{
-    background-color: rgba(0, 0, 0, 0.644);
-    border: white dashed 2px;
-    border-radius: 20px;
-
-
-}
-.titulo_pelis_accion{
-display: flex;
-margin-top: 50px;
-margin-bottom: 50px;
-font-size: x-large;
+    font-size: 1.5em;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-
-
-
+.descripcion{
+    text-decoration: dashed;
+    text-decoration-line: underline;
+    font-weight: bold;
+}
 
 @media(max-width:768px){
     header{
         flex-direction: column;
         width: 100%;
         margin-top: 20px;
+        padding-bottom: 15px;
     }
     .contpelis{
         flex-direction: column;

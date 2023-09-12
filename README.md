@@ -25,6 +25,6 @@ Películas Más Vistas:
 
 
 División de Páginas:
-Index y Géneros: Sebastián Roballos
-Detalles Género y Detalles Series: Juan Ibero
-Favoritos y Detalles Peli: Gian Bogni
+Index, Géneros y Detalles Series: Sebastián Roballos
+Detalles de Peli, Detalles Género : Gian Bogni
+Favoritos y Resultados de Búsqueda: Juan Ibero
