@@ -247,6 +247,17 @@ height: 40%;
     height: 400px;
 }
 
+.busq{
+    margin: 5px;
+    border-radius: 10px;
+    border-style: groove;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 
