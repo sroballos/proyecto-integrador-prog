@@ -163,6 +163,11 @@ header a{
     
 }
 
+.contenedor_g12{
+    display: flex;
+    flex-direction: row;
+}
+
 .g_contenedor{
     height: fit-content;
     width: 100%;
@@ -172,9 +177,9 @@ header a{
     margin-top: 50px;
 
     display: flex;
-    flex-direction:row;
-    
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
  .g1_contenedor{
     height: fit-content;
@@ -187,7 +192,7 @@ header a{
     display: flex;
     justify-content: center;
     flex-direction: column;
-   
+    align-items: center;
  }
  .g2_contenedor{
     height: fit-content;
@@ -196,30 +201,62 @@ header a{
     border: white dashed 2px;
     border-radius: 20px;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 635px;
+ }
+ .titulo_g2{
+    font-size: 50px;
+    font-family: 'Bebas Neue';
+    margin-bottom: 0;
+ }
 
+ .estrellas_g2{
+   font-size: 30px;
+   margin-top: 0;
  }
 
 .gladiador_g{
-    width: 375px;
-    height: 400px;
+    height: 504px;
+    width: 320px;
+    margin-top: 20px;
+  
 }
+
 
 .duracion{
 font-family: 'Titillium Web', sans-serif;
 color: grey;
-
+margin-block: unset;
 }
 
+
+
 .trailer{
-  
     background-color: rgba(0, 0, 0, 0.644);
     border: white dashed 2px;
-    
+}
+
+.p_g2{
+    font-size: smaller;
 }
 
 
 .titulo_g{
-font-family:'Bebas Neue', sans-serif;
+    font-family:'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    font-size: 35px;
+    margin-bottom: 0;
+}
+.año{
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .pelis_g{
@@ -233,6 +270,11 @@ width: 20%;
 height: 40%;
 }
 
+.extras{
+bottom: 0px;
+}
+
+
 
 .poster_accion{
     width: 375px;
@@ -245,21 +287,18 @@ height: 40%;
 
 .seriehouse{
     display: flex;
-    padding: 20px;
 }
 
 .seriehouse img{
     padding: 20px;
     border-radius: 100px;
-    width: 50%;
-    height: fit-content;
 }
 
 .detallesdehouse{
     display: flex;
     width: 50%;
     flex-direction: column;
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -282,10 +321,17 @@ height: 40%;
 .titulo_accion{
     display: flex;
     justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .detalles_del_genero{
   font-family: 'Bebas Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.644);
+  border: white dashed 2px;
+  
 }
 
 
@@ -354,19 +400,34 @@ font-size: x-large;
     .contenedor .generos{
         font-size: 55px;
     }
-    .seriehouse{
+    .g_contenedor{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 15px;
+    }
+    .trailer{
+        height: 250px;
+        width: 300px;
+    }
+    .g1_contenedor{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .g2_contenedor{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .contenedor_g12{
+        display: flex;
         flex-direction: column;
     }
-    .seriehouse img{
+    .main_genero{
+        flex-direction: column;
         width: 100%;
+        align-items: center;
     }
-    
-    .detallesdehouse{
-        width: 100%;
-    }
-
-    .detallesdehouse iframe{
-        width: 100%;
-    }
-    
 }
+
