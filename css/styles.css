@@ -246,19 +246,43 @@ height: 40%;
     width: 375px;
     height: 400px;
 }
-
+.busk{
+   margin: 50px;
+   display: flexbox;
+ 
+}
 .busq{
     margin: 5px;
     border-radius: 10px;
     border-style: groove;
+    background-color:  rgba(0, 0, 0, 0.644);
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: blue;
     display: flex;
     justify-content: center;
 }
-
-
+.busqueda{
+    border-style: dashed;
+    border-radius: 5px;
+    border-color: beige;
+    padding: 20px;
+    margin: 20px;
+    background-color:  rgba(0, 0, 0, 0.644);
+    
+}
+.imgbusq{
+    border-style: solid;
+    border-color: #000000;
+    border-width: 10px;
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    background-color:  rgba(0, 0, 0, 0.644);
+    padding: 20px;
+    display: flex;
+    justify-content: right;
+}
 
 
 @media(max-width:768px){
