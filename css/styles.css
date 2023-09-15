@@ -283,7 +283,46 @@ bottom: 0px;
 .busk{
    margin: 50px;
    display: flexbox;
- 
+}
+
+.ghouse{
+    margin-bottom: 15px;
+}
+
+.seriehouse{
+    display: flex;
+}
+
+.seriehouse img{
+    padding: 20px;
+    border-radius: 100px;
+    width:50%;
+    height: fit-content;
+
+}
+
+.detallesdehouse{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    font-size: 1.5em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.descripcion{
+    text-decoration: dashed;
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+
+
+.accion_aventura{
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 .busq{
     margin: 5px;
