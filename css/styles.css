@@ -305,6 +305,12 @@ bottom: 0px;
     font-family: 'Nunito Sans', sans-serif;
 }
 
+.yt-video iframe{
+    width: 560px;
+    height: 315px;
+    margin-bottom: 10px;
+}
+
 .descripcion{
     text-decoration: dashed;
     text-decoration-line: underline;
@@ -432,5 +438,24 @@ font-size: x-large;
         width: 100%;
         align-items: center;
     }
+
+    .yt-video iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    .seriehouse{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .seriehouse img{
+        width: 100%;
+    }
+
+    .detallesdehouse{
+        width: 100%;
+    }
+
 }
 
