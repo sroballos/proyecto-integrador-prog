@@ -237,13 +237,29 @@ margin-block: unset;
 .trailer{
     background-color: rgba(0, 0, 0, 0.644);
     border: white dashed 2px;
+    border-radius: 20px;
 }
 
 .p_g2{
     font-size: smaller;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.pelis_interesantes{
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+}
+.h4_g{
+    font-family:'Bebas Neue', sans-serif;
+    font-size: x-large
 
+}
 .titulo_g{
     font-family:'Bebas Neue', sans-serif;
     display: flex;
@@ -263,6 +279,7 @@ margin-block: unset;
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .peli_g{
@@ -331,7 +348,7 @@ bottom: 0px;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.644);
   border: white dashed 2px;
-  
+  border-radius: 20px;
 }
 
 
@@ -428,6 +445,10 @@ font-size: x-large;
         flex-direction: column;
         width: 100%;
         align-items: center;
+    }
+    .trailer_accion{
+        height: 250px;
+        width: 300px;
     }
 }
 
