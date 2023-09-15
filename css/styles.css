@@ -292,6 +292,9 @@ bottom: 0px;
 .seriehouse img{
     padding: 20px;
     border-radius: 100px;
+    width:50%;
+    height: fit-content;
+
 }
 
 .detallesdehouse{
