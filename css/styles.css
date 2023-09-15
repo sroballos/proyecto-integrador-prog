@@ -400,16 +400,15 @@ font-size: x-large;
     .contenedor .generos{
         font-size: 55px;
     }
-}
-
-
-
-@media(max-width:768px){
     .g_contenedor{
         flex-direction: column;
         width: 100%;
         margin-top: 20px;
         padding-bottom: 15px;
+    }
+    .trailer{
+        height: 250px;
+        width: 300px;
     }
     .g1_contenedor{
         flex-direction: column;
