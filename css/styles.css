@@ -150,6 +150,8 @@ header a{
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 0px;
+    display: flex;
+    justify-content: right;
   
     
     border-style:double;
@@ -161,6 +163,23 @@ header a{
     padding: 25px;
    
     
+}
+.estrella2{
+    padding: 25px;
+   
+}
+.estrellabox2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px;
+    display: flex;
+    justify-content: right;
+  
+    
+    border-style:double;
+    border-color: burlywood;
+    border-radius: 30px;
+    background-color: black;
 }
 
 .contenedor_g12{
@@ -357,6 +376,7 @@ bottom: 0px;
     color: blue;
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .detalles_del_genero{
@@ -388,7 +408,54 @@ bottom: 0px;
     background-color:  rgba(0, 0, 0, 0.644);
     padding: 20px;
     display: flex;
-    justify-content: right;
+    
+}
+.contenedor2{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    border: white dashed 2px;
+    border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  margin-right: 100px;
+    
+    
+    margin-bottom: 50px;
+    
+    
+    
+    
+}
+.dos{
+    margin-right: 50px;
+}
+busq2{
+    display: flex;
+    padding: 20px;
+    margin: 40px;
+    flex-direction: column;
+    
+}
+
+.divbusq{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.texto_busqueda{
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+    color:aliceblue;
+    font-family: "nunito-sans",sans-serif;
 }
 .accion_aventura{
     height: fit-content;
@@ -521,6 +588,56 @@ font-size: 45px;
         flex-direction: column;
     }
     .main_genero{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .contenedor2{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .dos{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .contenedor{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .estrella{
+        width: 500px;
+        padding: 0px;
+    }
+    .estrellabox{
+        flex-direction: column;
+        width: 30%;
+        align-items: center;
+    }
+    .estrellabox2{
+        flex-direction: column;
+        width: 30%;
+        align-items: center;
+    }
+    .estrella2{
+        width: 500px;
+        padding: 0px;
+    }
+    .busq2{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-right: 0px;
+    }
+    .divbusq{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 0px;
+    }
+    .videosbusq{
         flex-direction: column;
         width: 100%;
         align-items: center;
