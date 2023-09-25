@@ -4,6 +4,7 @@
 
 a{
     text-decoration: none;
+    color: white;
 }
 
 body{
@@ -29,11 +30,6 @@ header{
     margin-top: 40px;
     font-size: 0.7em;
 }
-header a{
-    line-height: 30px;
-    margin-top: 10px;
-    font-family: "Staatliches, sans-serif";
-}
 
 .logo{
     background-color: white;
@@ -55,12 +51,32 @@ header a{
     margin-top: 50px;
 }
 
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .contenedor h2{
     font-size: 2rem;
     display: flex;
     justify-content: center;
     font-family:'Bebas Neue', sans-serif;
     line-height: 1rem;
+}
+
+.contenedorgeneral ul{
+    font-size: 1.15rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    list-style: none;
+    width: 35vw;
+}
+
+.contenedorgeneral ul li{
+    font-family:'Bebas Neue', sans-serif;
 }
 
 .contenedor h3{
@@ -125,15 +141,11 @@ header a{
     background-color: rgba(165, 42, 42, 0.603) ;
 }
 
-
-
 .dos{
     margin-left: 20px;
     margin-top: 20px;
     
 }
-
-    
 
 .favoritos{
     display: flex;
@@ -241,17 +253,13 @@ header a{
     height: 504px;
     width: 320px;
     margin-top: 20px;
-  
 }
-
 
 .duracion{
 font-family: 'Titillium Web', sans-serif;
 color: grey;
 margin-block: unset;
 }
-
-
 
 .trailer{
     background-color: rgba(0, 0, 0, 0.644);
@@ -264,7 +272,6 @@ margin-block: unset;
     font-family: 'Nunito Sans', sans-serif;
     display: flex;
     text-align: center;
-
 }
 
 .pelis_interesantes{
@@ -310,8 +317,6 @@ height: 40%;
 bottom: 0px;
 }
 
-
-
 .poster_accion{
     width: 375px;
     height: 400px;
@@ -356,7 +361,6 @@ bottom: 0px;
     text-decoration-line: underline;
     font-weight: bold;
 }
-
 
 .accion_aventura{
     height: fit-content;
@@ -419,20 +423,13 @@ bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-  margin-right: 100px;
-    
-    
-    margin-bottom: 50px;
-    
-    
-    
-    
+    margin-right: 100px;
+    margin-bottom: 50px;   
 }
 .dos{
     margin-right: 50px;
 }
-busq2{
+.busq2{
     display: flex;
     padding: 20px;
     margin: 40px;
@@ -477,7 +474,6 @@ busq2{
     font-size: 50px;
 }
 
-
 .detalles_del_genero{
   font-family: 'Bebas Neue', sans-serif;
   display: flex;
@@ -487,14 +483,6 @@ busq2{
   border: white dashed 2px;
   font-size: 50px;
 }
-
-
-
-
- 
-
-
-
 
 .trailer_genero{
     height: fit-content;
@@ -524,10 +512,6 @@ busq2{
     background-color: rgba(0, 0, 0, 0.644);
     border: white dashed 2px;
     border-radius: 20px;
-
-
-
-
 }
 .titulo_pelis_accion{
 text-align: center;
@@ -538,7 +522,6 @@ font-family: 'Bebas Neue', sans-serif;
 font-size: 45px;
 }
 
-
 @media(max-width:768px){
     header{
         flex-direction: column;
@@ -546,6 +529,18 @@ font-size: 45px;
         margin-top: 20px;
         padding-bottom: 15px;
     }
+
+    nav{
+        flex-direction: column;
+    }
+
+    .contenedorgeneral ul{
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .contpelis{
         flex-direction: column;
         width: 100%;
