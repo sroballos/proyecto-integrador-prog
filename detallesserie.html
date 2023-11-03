@@ -13,30 +13,33 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap" rel="stylesheet"> 
     
     </head>
+
 <body>
     <div class="contenedorgeneral">
         <header>
             <a href="#"><img class="logo" src="./img/film.png" alt="Logo"></a>
             <h1 class="titulo">LA BESTIA PELIS</h1> 
-            <h2><a href="./index.html">Home</a></h2>
-            <h2><a href="./detallespeli.html">Detalles de Película</a></h2>
-            <h2><a href="./detallesserie.html">Detalles de Serie</a></h2>
-            <h2><a href="./generos.html">Géneros</a></h2>
-            <h2><a href="./detallegenero.html">Detalles de Géneros</a></h2>
-            <h2><a href="./favoritos.html">Favoritos</a></h2>
-            <h2><a href="./resultadobusqueda.html">Búsqueda</a></h2>
-            <div class="search">
-                <form action="POST">
-                    <input type="text">
-                </form>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./detallespeli.html">Detalles de Película</a></li>
+                    <li><a href="./detallesserie.html">Detalles de Serie</a></li>
+                    <li><a href="./generos.html">Géneros</a></li>
+                    <li><a href="./detallegenero.html">Detalles de Géneros</a></li>
+                    <li><a href="./favoritos.html">Favoritos</a></li>
+                    <li><a href="./resultadobusqueda.html">Búsqueda</a></li>
+                </ul>
+                    <form action="./resultadobusqueda.html">
+                        <input type="text" placeholder="Búsqueda">
+                    </form>
+            </nav>
         </header>
         <main>
-            <div class="contenedor seriesprincipales">
+            <section class="contenedor seriesprincipales">
                 <h2>Detalle de serie: DR. House</h2>
-                <div class="seriehouse">     
+                <section class="seriehouse">     
                     <img src="./img/House.jpg" alt="Doctor House">
-                    <div class="detallesdehouse">
+                    <article class="detallesdehouse">
                         <p><span class="descripcion">Sinópsis:</span> Gregory House, el mejor médico del hospital, es un hombre antipático que está especializado en el diagnóstico de enfermedades. Su carácter extravagante, su rebeldía y su honradez con los pacientes y su equipo lo convierten en una persona única. Trata de evitar la relación con los pacientes, porque lo que le interesa por encima de todo es la investigación de las enfermedades. Es además adicto a los calmantes y a las series de hospitales.</p>
                         <p><span class="descripcion">Rating:</span> ⭐⭐⭐⭐⭐</p>
                         <p><span class="descripcion">Reseña:</span> 'House' introduce al personaje principal más electrizante de la televisión en años" (The Washington Post)</p>
@@ -44,18 +47,16 @@
                         <div class="yt-video"> 
                         <iframe src="https://www.youtube.com/embed/64LGOCKxTdE?si=RPItN9HGCGPXeNFB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-
+                    </article>
+                </section>
+            </section>
         </main>
-        <footer class="contenedor final">
-            <h2><span class="blue">Gian </span> Bogni</h2>
-            <h2><span class="blue">Juan </span> Ibero</h2>
-            <h2><span class="blue">Sebastián </span> Roballos</h2>
-        </footer>
-    </div>
-    
+    <footer class="contenedor final">
+        <h2><span class="blue">Gian </span> Bogni</h2>
+        <h2><span class="blue">Juan </span> Ibero</h2>
+        <h2><span class="blue">Sebastián </span> Roballos</h2>
+    </footer>
+    </div>  
 </body>
+
 </html>
