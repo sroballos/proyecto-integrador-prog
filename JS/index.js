@@ -45,7 +45,7 @@ fetch(urlTopSeries, options)
     .then(function(data){
     peliculas = data.results
     for(let i=0; i < 5; i++){
-        contenedorSeriesPrimero.innerHTML += `<article class="media ${peliculas[i].id}"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt=${peliculas[i].name}> <p class="title">${peliculas[i].name}</p> <p class="mini">${peliculas[i].first_air_date}</p> <p class="mini">Rating:     <span style="color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p> </article>`
+        contenedorSeriesPrimero.innerHTML += `<a href = "./detallesserie.html?id=${peliculas[i].id}"><article class="media ${peliculas[i].id}"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt=${peliculas[i].name}> <p class="title">${peliculas[i].name}</p> <p class="mini">${peliculas[i].first_air_date}</p> <p class="mini">Rating:     <span style="color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p> </article></a>`
     }
     })
 
