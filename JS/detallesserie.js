@@ -1,5 +1,7 @@
-let id = "1408"
-let peliculas = []
+let queryString = location.search
+let queryStringObj = new URLSearchParams(queryString)
+let id = queryStringObj.get("id")
+let peliculas = [];
 let url = `https://api.themoviedb.org/3/tv/${id}?language=es-AR`;
 let urlRecomendaciones =`https://api.themoviedb.org/3/tv/${id}/recommendations`
 let recomendaciones = []
@@ -29,6 +31,9 @@ fetch(url, options)
         estrellas2 = ""
         for (let i = 0; i < estrellas; i++){
             estrellas2 += "⭐"
+        }
+        if (peliculas.tagline == ""){
+          peliculas.tagline = "La serie no posee un slogan"
         }
         contenedorPelisPrimero.innerHTML += `<h2>Detalle de serie: ${peliculas.original_name}</h2> <p style = "font-size: 1.2em; font-family: 'Nunito Sans', sans-serif; text-align: center; line-height:0">"${peliculas.tagline}"<p> <section class="seriehouse"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas.poster_path}" alt="Doctor House"> <article class="detallesdehouse"> <p><span class="descripcion">Sinópsis:</span> ${peliculas.overview}</p> <p><span class="descripcion">Rating: </span> ${estrellas2}</p> <p><span class="descripcion">Duración:</span> ${peliculas.first_air_date} | ${peliculas.last_air_date}</p> <p><span class="descripcion">Trailer:</span></p> <div class="yt-video">  <iframe src="https://www.youtube.com/embed/64LGOCKxTdE?si=RPItN9HGCGPXeNFB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </div> </article>`
     })
