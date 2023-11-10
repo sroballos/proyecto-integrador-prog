@@ -71,11 +71,20 @@ fetch(url, options)
         })
 
         .then(function(data){
-          console.log(data)
           review = data.results[0];
+          if (review == undefined){
+            review = {
+              content: "No se encontraron reviews para esta serie :(.",
+              author: "Null",
+              author_details: {
+                rating: "Null"
+              }
+            };
+          }
           if (peliculas.tagline == ""){
             peliculas.tagline = "La serie no posee un slogan";
           };
+
           contenedorPelisPrimero.innerHTML += `<h2>Detalle de serie: ${peliculas.original_name}</h2> <p style = "font-size: 1.2em; font-family: 'Nunito Sans', sans-serif; text-align: center; line-height:0">"${peliculas.tagline}"<p> <section class="seriehouse"> <img src="http://${"image.tmdb.org/t/p/w500" + peliculas.poster_path}" alt="Doctor House"> <article class="detallesdehouse"> <p><span class="descripcion">Sinópsis:</span> ${peliculas.overview}</p> <p><span class="descripcion">Rating: </span> ${estrellas2}</p> <p><span class="descripcion">Duración:</span> ${peliculas.first_air_date} | ${peliculas.last_air_date}</p><p><span class="descripcion">Géneros:</span> ${generos}</p>
           <p><span class="descripcion">Review:</span> ${review.content}</p> <p>Usuario: ${review.author} | Rating: ${review.author_details.rating}<p></article>`;
           console.log(review)
