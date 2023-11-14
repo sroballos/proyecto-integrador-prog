@@ -28,9 +28,10 @@
                     <li><a href="./favoritos.html">Favoritos</a></li>
                     <li><a href="./resultadobusqueda.html">Búsqueda</a></li>
                 </ul>
-                    <form action="./resultadobusqueda.html">
-                        <input type="text" placeholder="Búsqueda">
-                    </form>
+                <form action="./resultadobusqueda.html" id="miFormulario" onsubmit="return guardarRespuesta()">
+                    <input type="text" id="campoBusqueda" placeholder="Búsqueda">
+                    <input type="submit" value="Buscar">
+                  </form>
             </nav>
         </header>
         <main>
@@ -112,5 +113,6 @@
             <h2><span class="blue">Sebastián </span> Roballos</h2>
         </footer>
     </div>
+    <script src="./JS/resultadobusq.js" ></script>
 </body>
 </html>
