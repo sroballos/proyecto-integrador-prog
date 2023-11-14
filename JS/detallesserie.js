@@ -125,5 +125,4 @@ verRecomendaciones.addEventListener("click",function(){
 
 verReviews.addEventListener("click",function(){
   reviewCont.style.display = "flex"
-  console.log("bruh")
 })
