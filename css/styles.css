@@ -340,8 +340,12 @@ bottom: 0px;
     display: flex;
 }
 
+#review{
+    display: none;
+}
+
 .recomendaciones{
-    /* display: none; */
+    display: none;
 }
 
 .seriehouse img{
