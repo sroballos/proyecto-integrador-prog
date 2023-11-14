@@ -6,11 +6,13 @@ const options = {
     }
   };
   
-  fetch('https://api.themoviedb.org/3/movie/2000?language=en-US', options)
+  fetch('https://api.themoviedb.org/3/movie/movie_id?language=en-US', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
 
-    
 
+let mainCont= document.querySelector(".contenedor_g12");
+
+    mainCont.innerHTML='<h1>hola</h1>'
     

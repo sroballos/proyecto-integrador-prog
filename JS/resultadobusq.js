@@ -9,3 +9,5 @@ function guardarRespuesta() {
 let  a = ''; // Declaración de la variable "a"
 
 let texto = document.querySelector("p").innerText = `Resultados de búsqueda para: ${a}`  
+
+
