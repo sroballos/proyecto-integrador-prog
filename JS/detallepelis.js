@@ -17,22 +17,19 @@ const options = {
     // ACA EL CODIGO
      console.log(data)
      let pelis = data
-     let generos= []
-     let generos = ""
-        for (let i= 0; i<pelis.genres.length; i++){
-          if (i < pelis.genres.length-1){
-            generos += `<a href = "./detallegenero.html">${pelis.genres[i].name}</a>, `;
-          }
-          else{
-            generos += `<a href = "./detallegenero.html">${pelis.genres[i].name}</a>.`;
-          };
-        }
-
+     let generos= ""
+     for(let i=0; i<pelis.genres.length; i++){
+      if(i < pelis.genres.length-1){
+        generos += `<a href= "./detallegenero.html">${pelis.genres[i].name}</a>, `;
+      }
+      else{
+        generos +=`<a href= "./detallegenero.html">${pelis.genres[i].name}</a>. `;
+      };
+     }
     
-
      mainCont.innerHTML+=` <div class="g_contenedor">
      <img src="${"https://" + "image.tmdb.org/t/p/w500" + pelis.poster_path}" alt="${pelis.original_title} class="gladiador_g">
-     <h4 class="duracion">2h 35m</h4>
+     <h4 class="duracion">${pelis.runtime}min</h4>
      <div>
          <h2 class="titulo_g">${pelis.original_title}
          </h2>
