@@ -1,3 +1,7 @@
+let qst = location.search;
+let qstObj = new URLSearchParams(qst);
+let resulBusqueda = qstObj.get("buscar");
+
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let id = queryStringObj.get("id");
