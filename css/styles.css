@@ -536,6 +536,10 @@ font-family: 'Bebas Neue', sans-serif;
 font-size: 45px;
 }
 
+.tmbd{
+    
+}
+
 @media(max-width:768px){
     header{
         flex-direction: column;
