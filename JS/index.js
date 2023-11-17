@@ -1,3 +1,7 @@
+let qst = location.search;
+let qstObj = new URLSearchParams(qst);
+let resulBusqueda = qstObj.get("buscar");
+
 let peliculas = [];
 
 let url = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
