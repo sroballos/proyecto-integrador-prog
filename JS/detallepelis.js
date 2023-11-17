@@ -2,84 +2,133 @@ let qst = location.search;
 let qstObj = new URLSearchParams(qst);
 let resulBusqueda = qstObj.get("buscar");
 
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let id = queryStringObj.get("id");
+let peliculas = [];
+if (id == null){
+  id = "200"
+}
+
+let url = `https://api.themoviedb.org/3/movie/${id}?language=es-AR`;
+let urlRecomendaciones=`https://api.themoviedb.org/3/movie/${id}/recommendations?language=en-US&page=1`;
+let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US&page=1`;
+
+
+let recomendaciones = [];
+let contRecom = document.querySelector(".recomendaciones");
+let contenedorPelisPrimero = document.querySelector(".contenedor");
+let verRecomendaciones = document.querySelector("#verRec")
+let reviewCont = document.querySelector("#review")
+let verReviews = document.querySelector("#reveal")
+
+let review = []
+
+//Revisar esta función, ver si se puede optimizar para no tener que utilizarla. ML
+let rating = function(id){
+  if (id >=7){
+      return "green"
+  }
+  else if (id > 5 && id < 7){
+      return "yellow"
+  }
+  else{
+      return "red"
+  }
+};
+
+
 const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZjU5MWY4NDM4MGM1ZjNmMTliMjc0NDhhNWU2ZjFiMCIsInN1YiI6IjY1NGU0MjE4MjkzODM1NDNmNDg1OGIxZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tqMN7OL3YrQsOlckKOBcg4C39IECdKrLojZnfJxrVPw'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOWIxNmJlODMyNTZlNzlmODBjZDJiMzcyNjg4NmUxNiIsInN1YiI6IjY1NDUzMzM4NmJlYWVhMDEwYjMyNmU4MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TWFgCaQuRoeFRaJ1NjUeJIef8ktIvl24agxdrMIOHWo'
     }
   };
 
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZjU5MWY4NDM4MGM1ZjNmMTliMjc0NDhhNWU2ZjFiMCIsInN1YiI6IjY1NGU0MjE4MjkzODM1NDNmNDg1OGIxZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tqMN7OL3YrQsOlckKOBcg4C39IECdKrLojZnfJxrVPw'
-    }
-  };
-  
-  fetch('https://api.themoviedb.org/3/movie/movie_id/reviews?language=en-US&page=1', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
+fetch(url, options)
+
+    .then(function(response){
+        return response.json();
+    })
+
+    .then(function(data){
+        let peliculas = data;
+        let rating = Math.round(peliculas.vote_average);
+        let estrellas2 = "";
+        for (let i = 0; i < rating; i++){
+            estrellas2 += "⭐";
+        };
+
+        let generos = ""
+        for (let i= 0; i<peliculas.genres.length; i++){
+          if (i < peliculas.genres.length-1){
+            generos += `<a href = "./detallegenero.html">${peliculas.genres[i].name}</a>, `;
+          }
+          else{
+            generos += `<a href = "./detallegenero.html">${peliculas.genres[i].name}</a>.`;
+          };
+        }
 
 
-  let mainCont= document.querySelector(".contenedor_g12");
-  let recomendaciones= document.querySelector(".extras");
-  fetch('https://api.themoviedb.org/3/movie/500?language=en-US', options)
-  .then(function(response){
-    return response.json()
-  })
-  .then(function(data){
-    // ACA EL CODIGO
-     console.log(data)
-     let pelis = data
-     let generos= ""
-     for(let i=0; i<pelis.genres.length; i++){
-      if(i < pelis.genres.length-1){
-        generos += `<a href= "./detallegenero.html">${pelis.genres[i].name}</a>, `;
-      }
-      else{
-        generos +=`<a href= "./detallegenero.html">${pelis.genres[i].name}</a>. `;
-      };
+      fetch(urlReviews, options)
+
+        .then(function(response){
+          return response.json()
+        })
+
+        .then(function(data){
+          review = data.results;
+          if (review == undefined){
+            review = {
+              content: "No se encontraron reviews para esta serie :(.",
+              author: "Null",
+              author_details: {
+                rating: "Null"
+              }
+            };
+          }
+          if (peliculas.tagline == ""){
+            peliculas.tagline = "La serie no posee un slogan";
+          };
+
+          contenedorPelisPrimero.innerHTML += `<h2>Detalle de Peliculas: ${peliculas.original_title}</h2> <p style = "font-size: 1.2em; font-family: 'Nunito Sans', sans-serif; text-align: center; line-height:0">"${peliculas.tagline}"<p> <section class="seriehouse"> <img src="http://${"image.tmdb.org/t/p/w500" + peliculas.poster_path}" alt="Doctor House"> <article class="detallesdehouse"> <p><span class="descripcion">Sinópsis:</span> ${peliculas.overview}</p> <p><span class="descripcion">Rating: </span> ${estrellas2}</p> <p><span class="descripcion">Duración:</span> ${peliculas.runtime} min</p><p><span class="descripcion">Géneros:</span> ${generos}</p>
+          </article>`;
+          console.log(review)
+          for (let i=0; i<review.length; i++){
+            reviewCont.innerHTML += `<article style="border: 1px white solid; border-radius:10px; margin:10px; padding:10px"><p>${review[i].content}</p> <p style="text-align: left;">Usuario: ${review[i].author} | Rating: ${review[i].author_details.rating} </p></article>`
+          }
+          
+        });
       
-     }
-     let rating = Math.round(pelis.vote_average);
-     let estrellas2="";
-     for (let i = 0; i<rating; i++){
-         estrellas2+="⭐";
-     };
-    
+    })
+    .catch(function(error){
+      console.log(error);
+  });
 
+fetch(urlRecomendaciones, options)
 
-     mainCont.innerHTML+=` <div class="g_contenedor">
-     <img src="${"https://" + "image.tmdb.org/t/p/w500" + pelis.poster_path}" alt="${pelis.original_title} class="gladiador_g">
-     <h4 class="duracion">${pelis.runtime}min</h4>
-     <div>
-         <h2 class="titulo_g">${pelis.original_title}
-         </h2>
-     <h4 class="año">${pelis.release_date}
-      </h4>
-     </div>
-  </div>
-  
-  <div class="g2_contenedor">
-     <h3 class="titulo_g2">${generos}</h3>
-     <h4 class="estrellas_g2">${estrellas2}</h4>
-     <p class="p_g2">${pelis.overview}</p>`
+  .then(function(response){
+      return response.json();
   })
-  .catch()
 
+  .then(function(data){
+      let peliculas = data.results;
+      for (let i=0; i< 5; i++){
+        contRecom.innerHTML += `<a href = "./detallespeli.html?id=${peliculas[i].id}"><article class="media ${peliculas[i].id}"> <img src="https://${"image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt="${peliculas[i].original_title}"> <p class="title">${peliculas[i].original_title}</p> <p class="mini">${peliculas[i].release_date}</p> <p class="mini">Rating: <span style= "color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p></article></a>`;
+      }
+      
+  })
 
+  .catch(function(error){
+    console.log(error);
+});;
 
+verRecomendaciones.addEventListener("click",function(){
+  contRecom.style.display = "flex"
+})
 
+verReviews.addEventListener("click",function(){
+  reviewCont.style.display = "flex"
+})
 
-
-
-
-
-
-
-
-
-   
