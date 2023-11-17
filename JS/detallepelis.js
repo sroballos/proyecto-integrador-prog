@@ -25,8 +25,16 @@ const options = {
       else{
         generos +=`<a href= "./detallegenero.html">${pelis.genres[i].name}</a>. `;
       };
+      
      }
+     let rating = Math.round(pelis.vote_average);
+     let estrellas2="";
+     for (let i = 0; i<rating; i++){
+         estrellas2+="⭐";
+     };
     
+
+
      mainCont.innerHTML+=` <div class="g_contenedor">
      <img src="${"https://" + "image.tmdb.org/t/p/w500" + pelis.poster_path}" alt="${pelis.original_title} class="gladiador_g">
      <h4 class="duracion">${pelis.runtime}min</h4>
@@ -40,10 +48,8 @@ const options = {
   
   <div class="g2_contenedor">
      <h3 class="titulo_g2">${generos}</h3>
-     <h4 class="estrellas_g2">⭐⭐⭐⭐⭐</h4>
-     <p class="p_g2">${pelis.overview}</p>
-     <iframe class="trailer" width="500" height="300" src="https://www.youtube.com/embed/uvbavW31adA?si=d79XZbKHGOSUcqgy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
- 
+     <h4 class="estrellas_g2">${estrellas2}</h4>
+     <p class="p_g2">${pelis.overview}</p>`
   })
   .catch()
 
