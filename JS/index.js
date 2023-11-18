@@ -1,7 +1,3 @@
-let qst = location.search;
-let qstObj = new URLSearchParams(qst);
-let resulBusqueda = qstObj.get("buscar");
-
 let peliculas = [];
 
 let url = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
@@ -32,7 +28,7 @@ fetch(url, options)
     .then(function(data){
     peliculas = data.results
     for(let i=0; i < 5; i++){
-        contenedorPelisPrimero.innerHTML += `<article class="media ${peliculas[i].id}"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt="${peliculas[i].original_title}"> <p class="title">${peliculas[i].original_title}</p> <p class="mini">${peliculas[i].release_date}</p> <p class="mini">Rating: <span style= "color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p></article>`;
+        contenedorPelisPrimero.innerHTML += `<a href="./detallespeli.html?id=${peliculas[i].id}" ><article class="media ${peliculas[i].id}"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt="${peliculas[i].original_title}"> <p class="title">${peliculas[i].original_title}</p> <p class="mini">${peliculas[i].release_date}</p> <p class="mini">Rating: <span style= "color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p></article></a>`;
     }
     })
 
@@ -66,7 +62,7 @@ fetch(urlFavoritasPelis, options)
     .then(function(data){
     let peliculas = data.results;
     for(let i=0; i < 5; i++){
-        contenedorPelisFavs.innerHTML += `<article class="media ${peliculas[i].id}"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt="${peliculas[i].original_title}"> <p class="title">${peliculas[i].original_title}</p> <p class="mini">${peliculas[i].release_date}</p> <p class="mini">Rating: <span style= "color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p></article>`;
+        contenedorPelisFavs.innerHTML += `<a href = "./detallesserie.html?id=${peliculas[i].id}"><article class="media ${peliculas[i].id}"> <img src="${http + "image.tmdb.org/t/p/w500" + peliculas[i].poster_path}" alt="${peliculas[i].original_title}"> <p class="title">${peliculas[i].original_title}</p> <p class="mini">${peliculas[i].release_date}</p> <p class="mini">Rating: <span style= "color:${rating(Math.round(peliculas[i].vote_average))}; margin-left: 5px">${Math.round(peliculas[i].vote_average)}</span></p></article></a>`;
     };
     })
 
